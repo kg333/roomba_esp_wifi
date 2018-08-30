@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name mylib)(type Legacy)(uri C:/Users/Matthew/Documents/KiCAD/libraries/mylib.lib)(options "")(descr ""))
+  (lib (name nodemcu_v2)(type Legacy)(uri C:/Users/Matthew/Documents/KiCAD/libraries/nodemcu_v2.lib)(options "")(descr ""))
+)

@@ -1,0 +1,454 @@
+EESchema Schematic File Version 4
+LIBS:roomba-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector:Mini-DIN-7 J?
+U 1 1 5B879C78
+P 1750 1300
+F 0 "J?" H 1750 1026 50  0000 C CNN
+F 1 "Mini-DIN-7" H 1750 935 50  0000 C CNN
+F 2 "" V 1740 1290 50  0001 C CNN
+F 3 "http://service.powerdynamics.com/ec/Catalog17/Section%2011.pdf" V 1740 1290 50  0001 C CNN
+	1    1750 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L nodemcu_v2:NODEMCU_V2 U?
+U 1 1 5B879D1E
+P 5550 4100
+F 0 "U?" H 5550 5175 50  0000 C CNN
+F 1 "NODEMCU_V2" H 5550 5084 50  0000 C CNN
+F 2 "Package_49x24.5x13mm" H 5550 3250 50  0001 C CNN
+F 3 "http://espressif.com/sites/default/files/documentation/0a-esp8266ex_datasheet_en.pdf" H 5650 3250 50  0001 C CNN
+	1    5550 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+BATT #PWR?
+U 1 1 5B879D63
+P 2550 850
+F 0 "#PWR?" H 2550 700 50  0001 C CNN
+F 1 "+BATT" H 2565 1023 50  0000 C CNN
+F 2 "" H 2550 850 50  0001 C CNN
+F 3 "" H 2550 850 50  0001 C CNN
+	1    2550 850 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2050 1400 2550 1400
+Wire Wire Line
+	2550 1400 2550 850 
+Wire Wire Line
+	1450 1400 1400 1400
+Wire Wire Line
+	1400 1400 1400 1750
+Wire Wire Line
+	1400 1750 2550 1750
+Wire Wire Line
+	2550 1750 2550 1400
+Connection ~ 2550 1400
+Wire Wire Line
+	1450 1200 1300 1200
+Wire Wire Line
+	1300 1200 1300 1750
+Wire Wire Line
+	1750 1000 1750 900 
+Wire Wire Line
+	1750 900  1300 900 
+Wire Wire Line
+	1300 900  1300 1200
+Connection ~ 1300 1200
+Text Label 2600 1300 0    50   ~ 0
+ROOMBA_RXD
+Wire Wire Line
+	2050 1300 3100 1300
+Wire Wire Line
+	2050 1200 3100 1200
+Wire Wire Line
+	650  1300 1450 1300
+Text Label 2600 1200 0    50   ~ 0
+ROOMBA_BRC
+Text Label 700  1300 0    50   ~ 0
+ROOMBA_TXD
+Wire Notes Line
+	3300 550  550  550 
+Wire Notes Line
+	550  550  550  2100
+Wire Notes Line
+	550  2100 3300 2100
+Wire Notes Line
+	3300 2100 3300 550 
+$Comp
+L Connector:Conn_01x02_Female J?
+U 1 1 5B87A96A
+P 4000 1250
+F 0 "J?" H 4028 1226 50  0000 L CNN
+F 1 "VIN" H 4028 1135 50  0000 L CNN
+F 2 "" H 4000 1250 50  0001 C CNN
+F 3 "~" H 4000 1250 50  0001 C CNN
+	1    4000 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x02_Female J?
+U 1 1 5B87A9FF
+P 6350 1350
+F 0 "J?" H 6244 1025 50  0000 C CNN
+F 1 "VOUT" H 6244 1116 50  0000 C CNN
+F 2 "" H 6350 1350 50  0001 C CNN
+F 3 "~" H 6350 1350 50  0001 C CNN
+	1    6350 1350
+	-1   0    0    1   
+$EndComp
+$Comp
+L Regulator_Linear:LM317_3PinPackage U?
+U 1 1 5B87AAB3
+P 5000 850
+F 0 "U?" H 5000 1092 50  0000 C CNN
+F 1 "LM317_3PinPackage" H 5000 1001 50  0000 C CNN
+F 2 "" H 5000 1100 50  0001 C CIN
+F 3 "http://www.ti.com/lit/ds/symlink/lm317.pdf" H 5000 850 50  0001 C CNN
+	1    5000 850 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_POT RV?
+U 1 1 5B87AB44
+P 5000 1450
+F 0 "RV?" H 4930 1404 50  0000 R CNN
+F 1 "10K" H 4930 1495 50  0000 R CNN
+F 2 "" H 5000 1450 50  0001 C CNN
+F 3 "~" H 5000 1450 50  0001 C CNN
+	1    5000 1450
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5B87AD86
+P 4400 1200
+F 0 "C?" H 4515 1246 50  0000 L CNN
+F 1 "0.1µF" H 4515 1155 50  0000 L CNN
+F 2 "" H 4438 1050 50  0001 C CNN
+F 3 "~" H 4400 1200 50  0001 C CNN
+	1    4400 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C?
+U 1 1 5B87B0FF
+P 5800 1350
+F 0 "C?" H 5918 1396 50  0000 L CNN
+F 1 "47µF" H 5918 1305 50  0000 L CNN
+F 2 "" H 5838 1200 50  0001 C CNN
+F 3 "~" H 5800 1350 50  0001 C CNN
+F 4 "50V" H 5800 1350 50  0001 C CNN "Voltage"
+	1    5800 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R?
+U 1 1 5B87B1E9
+P 5500 1050
+F 0 "R?" H 5568 1096 50  0000 L CNN
+F 1 "200" H 5568 1005 50  0000 L CNN
+F 2 "" V 5540 1040 50  0001 C CNN
+F 3 "~" H 5500 1050 50  0001 C CNN
+	1    5500 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR?
+U 1 1 5B879DB5
+P 1300 1750
+F 0 "#PWR?" H 1300 1500 50  0001 C CNN
+F 1 "Earth" H 1300 1600 50  0001 C CNN
+F 2 "" H 1300 1750 50  0001 C CNN
+F 3 "~" H 1300 1750 50  0001 C CNN
+	1    1300 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR?
+U 1 1 5B87B98C
+P 5000 1800
+F 0 "#PWR?" H 5000 1550 50  0001 C CNN
+F 1 "Earth" H 5000 1650 50  0001 C CNN
+F 2 "" H 5000 1800 50  0001 C CNN
+F 3 "~" H 5000 1800 50  0001 C CNN
+	1    5000 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6200 1350 6200 1750
+Wire Wire Line
+	5000 1750 5000 1800
+Wire Wire Line
+	5000 1750 4750 1750
+Wire Wire Line
+	4150 1750 4150 1350
+Connection ~ 5000 1750
+Wire Wire Line
+	3800 1350 4150 1350
+Wire Wire Line
+	6200 1350 6550 1350
+Wire Wire Line
+	6550 1250 6200 1250
+Wire Wire Line
+	6200 1250 6200 850 
+Wire Wire Line
+	5500 900  5500 850 
+Connection ~ 5500 850 
+Wire Wire Line
+	5500 850  5300 850 
+Wire Wire Line
+	5500 1200 5500 1250
+Wire Wire Line
+	5500 1250 5000 1250
+Wire Wire Line
+	5000 1250 5000 1150
+Wire Wire Line
+	5000 1300 5000 1250
+Connection ~ 5000 1250
+Wire Wire Line
+	5000 1600 5000 1750
+Wire Wire Line
+	5800 1200 5800 850 
+Connection ~ 5800 850 
+Wire Wire Line
+	5800 850  5500 850 
+Wire Wire Line
+	5800 1500 5800 1750
+Connection ~ 5800 1750
+Wire Wire Line
+	5800 1750 5000 1750
+Wire Wire Line
+	4700 850  4400 850 
+Wire Wire Line
+	4400 850  4400 1050
+Wire Wire Line
+	4400 1350 4400 1750
+Connection ~ 4400 1750
+Wire Wire Line
+	4400 1750 4150 1750
+Wire Wire Line
+	4150 1250 4150 850 
+Wire Wire Line
+	4150 850  4400 850 
+Connection ~ 4400 850 
+Wire Wire Line
+	3800 1250 4150 1250
+Wire Wire Line
+	4850 1450 4750 1450
+Wire Wire Line
+	4750 1450 4750 1750
+Connection ~ 4750 1750
+Wire Wire Line
+	4750 1750 4400 1750
+Wire Wire Line
+	5800 850  6200 850 
+Wire Wire Line
+	5800 1750 6200 1750
+Wire Notes Line
+	6350 2000 4000 2000
+Wire Notes Line
+	4000 2000 4000 550 
+Wire Notes Line
+	4000 550  6350 550 
+Wire Notes Line
+	6350 550  6350 2000
+Text Notes 4800 2100 0    50   Italic 0
+Buck Converter
+$Comp
+L power:Earth #PWR?
+U 1 1 5B883010
+P 3600 1350
+F 0 "#PWR?" H 3600 1100 50  0001 C CNN
+F 1 "Earth" H 3600 1200 50  0001 C CNN
+F 2 "" H 3600 1350 50  0001 C CNN
+F 3 "~" H 3600 1350 50  0001 C CNN
+	1    3600 1350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3600 1350 3800 1350
+Connection ~ 3800 1350
+$Comp
+L power:+BATT #PWR?
+U 1 1 5B8851C8
+P 3600 1100
+F 0 "#PWR?" H 3600 950 50  0001 C CNN
+F 1 "+BATT" H 3615 1273 50  0000 C CNN
+F 2 "" H 3600 1100 50  0001 C CNN
+F 3 "" H 3600 1100 50  0001 C CNN
+	1    3600 1100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3600 1100 3600 1250
+Wire Wire Line
+	3600 1250 3800 1250
+Connection ~ 3800 1250
+Wire Wire Line
+	6550 1350 6700 1350
+Wire Wire Line
+	6700 1350 6700 1400
+Connection ~ 6550 1350
+$Comp
+L power:Earth #PWR?
+U 1 1 5B886CC0
+P 6700 1400
+F 0 "#PWR?" H 6700 1150 50  0001 C CNN
+F 1 "Earth" H 6700 1250 50  0001 C CNN
+F 2 "" H 6700 1400 50  0001 C CNN
+F 3 "~" H 6700 1400 50  0001 C CNN
+	1    6700 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5B887698
+P 6700 1050
+F 0 "#PWR?" H 6700 900 50  0001 C CNN
+F 1 "+5V" H 6715 1223 50  0000 C CNN
+F 2 "" H 6700 1050 50  0001 C CNN
+F 3 "" H 6700 1050 50  0001 C CNN
+	1    6700 1050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6550 1250 6700 1250
+Wire Wire Line
+	6700 1250 6700 1050
+Connection ~ 6550 1250
+$Comp
+L power:+5V #PWR?
+U 1 1 5B88814C
+P 3950 4550
+F 0 "#PWR?" H 3950 4400 50  0001 C CNN
+F 1 "+5V" H 3965 4723 50  0000 C CNN
+F 2 "" H 3950 4550 50  0001 C CNN
+F 3 "" H 3950 4550 50  0001 C CNN
+	1    3950 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4900 4650 3950 4650
+Wire Wire Line
+	3950 4650 3950 4550
+$Comp
+L power:Earth #PWR?
+U 1 1 5B88970C
+P 4850 4800
+F 0 "#PWR?" H 4850 4550 50  0001 C CNN
+F 1 "Earth" H 4850 4650 50  0001 C CNN
+F 2 "" H 4850 4800 50  0001 C CNN
+F 3 "~" H 4850 4800 50  0001 C CNN
+	1    4850 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR?
+U 1 1 5B88A245
+P 6250 4800
+F 0 "#PWR?" H 6250 4550 50  0001 C CNN
+F 1 "Earth" H 6250 4650 50  0001 C CNN
+F 2 "" H 6250 4800 50  0001 C CNN
+F 3 "~" H 6250 4800 50  0001 C CNN
+	1    6250 4800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6200 3850 6250 3850
+Wire Wire Line
+	6250 3850 6250 4550
+Wire Wire Line
+	6200 4550 6250 4550
+Connection ~ 6250 4550
+Wire Wire Line
+	6250 4550 6250 4800
+Wire Wire Line
+	4900 4550 4850 4550
+Wire Wire Line
+	4850 4550 4850 4800
+Wire Wire Line
+	4900 4150 4850 4150
+Wire Wire Line
+	4850 4150 4850 4550
+Connection ~ 4850 4550
+Wire Wire Line
+	6200 4350 6750 4350
+Wire Wire Line
+	6200 4450 6750 4450
+Text Notes 6850 4500 0    50   Italic 0
+Note: Espressif CEO states I/O is 5V tolerant.\n           Add level shifters for final design.
+Text Label 6300 4350 0    50   Italic 0
+ROOMBA_TXD
+Text Label 6300 4450 0    50   Italic 0
+ROOMBA_RXD
+Wire Wire Line
+	6200 3350 6750 3350
+Text Label 6300 3350 0    50   Italic 0
+ROOMBA_BRC
+$Comp
+L power:+5V #PWR?
+U 1 1 5B891F6F
+P 7100 3200
+F 0 "#PWR?" H 7100 3050 50  0001 C CNN
+F 1 "+5V" H 7115 3373 50  0000 C CNN
+F 2 "" H 7100 3200 50  0001 C CNN
+F 3 "" H 7100 3200 50  0001 C CNN
+	1    7100 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7100 3300 7100 3200
+$Comp
+L power:Earth #PWR?
+U 1 1 5B89301A
+P 7100 3900
+F 0 "#PWR?" H 7100 3650 50  0001 C CNN
+F 1 "Earth" H 7100 3750 50  0001 C CNN
+F 2 "" H 7100 3900 50  0001 C CNN
+F 3 "~" H 7100 3900 50  0001 C CNN
+	1    7100 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Jumper_NC_Dual JP?
+U 1 1 5B897414
+P 7100 3550
+F 0 "JP?" V 7054 3652 50  0000 L CNN
+F 1 " " V 7145 3652 50  0000 L CNN
+F 2 "" H 7100 3550 50  0001 C CNN
+F 3 "~" H 7100 3550 50  0001 C CNN
+	1    7100 3550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7100 3800 7100 3900
+Wire Wire Line
+	6200 3550 7000 3550
+Text Notes 7350 3600 0    50   Italic 0
+1-2: Normal boot\n2-3: Flash
+Text Notes 8150 7650 0    50   ~ 0
+2018/08/29
+Text Notes 7400 7500 0    50   ~ 0
+Roomba 560 ESP-Wifi Prototype
+Text Notes 10600 7650 0    50   ~ 0
+1
+Text Notes 7000 7100 0    50   ~ 0
+Drawn by: Matthew A Sparks
+$EndSCHEMATC
