@@ -374,12 +374,9 @@ Wire Wire Line
 	7000 3650 7000 3550
 Wire Wire Line
 	7300 3550 7300 3850
-Wire Wire Line
-	6150 3850 7300 3850
 Connection ~ 7000 3650
 Text Label 7600 3650 0    50   ~ 0
 GPIO0
-Connection ~ 7300 3850
 Text Label 7600 3850 0    50   ~ 0
 GPIO2
 Wire Wire Line
@@ -466,13 +463,6 @@ Connection ~ 1850 4300
 Wire Wire Line
 	1850 4300 1850 4350
 Wire Wire Line
-	1850 4300 2650 4300
-Wire Wire Line
-	2650 4300 2650 4150
-Wire Wire Line
-	2650 3950 2650 3850
-Connection ~ 2650 3850
-Wire Wire Line
 	1200 5650 1200 5550
 Connection ~ 1200 5550
 Wire Wire Line
@@ -489,18 +479,6 @@ Wire Wire Line
 	2450 5850 2450 6000
 Wire Wire Line
 	2450 6000 1850 6000
-$Comp
-L Device:C_Small C4
-U 1 1 5BBA7B25
-P 2650 4050
-F 0 "C4" H 2742 4141 50  0000 L CNN
-F 1 "10 uF" H 2742 4050 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2650 4050 50  0001 C CNN
-F 3 "~" H 2650 4050 50  0001 C CNN
-F 4 "25V" H 2742 3959 50  0000 L CNN "Voltage"
-	1    2650 4050
-	1    0    0    -1  
-$EndComp
 $Comp
 L Device:C_Small C2
 U 1 1 5BBABA07
@@ -525,134 +503,18 @@ F 4 "25V" H 2542 5659 50  0000 L CNN "Voltage"
 	1    2450 5750
 	1    0    0    -1  
 $EndComp
-$Comp
-L Switch:SW_Push SW2
-U 1 1 5BBAE541
-P 8050 3650
-F 0 "SW2" H 7950 3750 50  0000 C CNN
-F 1 "Flash" H 8050 3550 50  0000 C CNN
-F 2 "Button_Switch_SMD:SW_SPST_B3S-1000" H 8050 3850 50  0001 C CNN
-F 3 "" H 8050 3850 50  0001 C CNN
-F 4 "B3S-1000" H 8050 3650 50  0001 C CNN "MFG_PN"
-	1    8050 3650
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	7000 3650 7850 3650
-Wire Wire Line
-	8250 3650 8350 3650
-Wire Wire Line
-	8350 3650 8350 3850
-Wire Wire Line
-	8350 3850 8350 4050
-$Comp
-L power:Earth #PWR020
-U 1 1 5BBB69AE
-P 8350 4050
-F 0 "#PWR020" H 8350 3800 50  0001 C CNN
-F 1 "Earth" H 8350 3900 50  0001 C CNN
-F 2 "" H 8350 4050 50  0001 C CNN
-F 3 "~" H 8350 4050 50  0001 C CNN
-	1    8350 4050
-	1    0    0    -1  
-$EndComp
-$Comp
-L Switch:SW_Push SW1
-U 1 1 5BBB9752
-P 4450 4250
-F 0 "SW1" V 4600 4350 50  0000 C CNN
-F 1 "Reset" V 4400 4050 50  0000 C CNN
-F 2 "Button_Switch_SMD:SW_SPST_B3S-1000" H 4450 4450 50  0001 C CNN
-F 3 "" H 4450 4450 50  0001 C CNN
-F 4 "B3S-1000" V 4450 4250 50  0001 C CNN "MFG_PN"
-	1    4450 4250
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	7300 3850 8350 3850
-Connection ~ 8350 3850
 Connection ~ 3800 3650
 Wire Wire Line
 	3800 3650 3800 3850
 Wire Wire Line
-	4300 3650 4450 3650
-Wire Wire Line
 	4300 3850 4950 3850
 Wire Wire Line
-	4450 4050 4450 3650
-Connection ~ 4450 3650
+	7300 3850 7850 3850
 Wire Wire Line
-	4450 3650 4950 3650
+	6150 3850 7300 3850
+Connection ~ 7300 3850
 Wire Wire Line
-	4450 4450 4450 4650
-$Comp
-L power:Earth #PWR012
-U 1 1 5BBCF3CA
-P 4450 4650
-F 0 "#PWR012" H 4450 4400 50  0001 C CNN
-F 1 "Earth" H 4450 4500 50  0001 C CNN
-F 2 "" H 4450 4650 50  0001 C CNN
-F 3 "~" H 4450 4650 50  0001 C CNN
-	1    4450 4650
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x04_Female J2
-U 1 1 5BBD583B
-P 2350 2800
-F 0 "J2" H 2244 2375 50  0000 C CNN
-F 1 "Conn_01x04_Female" H 2244 2466 50  0000 C CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical" H 2350 2800 50  0001 C CNN
-F 3 "~" H 2350 2800 50  0001 C CNN
-	1    2350 2800
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	2550 2600 2900 2600
-Wire Wire Line
-	2900 2600 2900 2500
-Wire Wire Line
-	2550 2700 2900 2700
-Wire Wire Line
-	2550 2800 2900 2800
-Wire Wire Line
-	2550 2900 2900 2900
-Wire Wire Line
-	2900 2900 2900 3000
-$Comp
-L power:Earth #PWR010
-U 1 1 5BBE496D
-P 2900 3000
-F 0 "#PWR010" H 2900 2750 50  0001 C CNN
-F 1 "Earth" H 2900 2850 50  0001 C CNN
-F 2 "" H 2900 3000 50  0001 C CNN
-F 3 "~" H 2900 3000 50  0001 C CNN
-	1    2900 3000
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+5V #PWR09
-U 1 1 5BBE8442
-P 2900 2500
-F 0 "#PWR09" H 2900 2350 50  0001 C CNN
-F 1 "+5V" H 2915 2673 50  0000 C CNN
-F 2 "" H 2900 2500 50  0001 C CNN
-F 3 "" H 2900 2500 50  0001 C CNN
-	1    2900 2500
-	1    0    0    -1  
-$EndComp
-Text Notes 1550 2850 0    50   Italic 0
-Programming\nHeader
-Text Label 2600 2700 0    50   Italic 0
-LOCAL_TXD
-Text Label 2600 2800 0    50   Italic 0
-LOCAL_RXD
-Text Notes 2150 2950 0    50   ~ 0
-GND
-Text Notes 2150 2850 0    50   ~ 0
-TXD
-Text Notes 2150 2750 0    50   ~ 0
-RXD
-Text Notes 2150 2650 0    50   ~ 0
-+5V
+	4300 3650 4950 3650
 $EndSCHEMATC

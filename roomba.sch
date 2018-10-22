@@ -85,28 +85,6 @@ Wire Wire Line
 Wire Wire Line
 	1850 4150 1850 4300
 $Comp
-L Logic_LevelTranslator:TXB0104D U3
-U 1 1 5BB7A4D3
-P 5450 1750
-F 0 "U3" H 5200 2450 50  0000 C CNN
-F 1 "TXB0104D" H 5700 1100 50  0000 C CNN
-F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 5450 1000 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/txb0104.pdf" H 5560 1845 50  0001 C CNN
-	1    5450 1750
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+5V #PWR017
-U 1 1 5BB7A5AB
-P 5600 850
-F 0 "#PWR017" H 5600 700 50  0001 C CNN
-F 1 "+5V" H 5615 1023 50  0000 C CNN
-F 2 "" H 5600 850 50  0001 C CNN
-F 3 "" H 5600 850 50  0001 C CNN
-	1    5600 850 
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:+3.3V #PWR015
 U 1 1 5BB7CAC1
 P 5550 3250
@@ -119,62 +97,18 @@ F 3 "" H 5550 3250 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	5550 3450 5550 3250
-$Comp
-L power:+3.3V #PWR013
-U 1 1 5BB7DFB5
-P 5350 850
-F 0 "#PWR013" H 5350 700 50  0001 C CNN
-F 1 "+3.3V" H 5365 1023 50  0000 C CNN
-F 2 "" H 5350 850 50  0001 C CNN
-F 3 "" H 5350 850 50  0001 C CNN
-	1    5350 850 
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5350 1050 5350 850 
-Wire Wire Line
-	5550 1050 5550 950 
-Wire Wire Line
-	5550 950  5600 950 
-Wire Wire Line
-	5600 950  5600 850 
-Wire Wire Line
-	5850 1650 6400 1650
-Text Label 5950 1650 0    50   Italic 0
+Text Label 5950 2200 0    50   Italic 0
 ROOMBA_RXD
-Wire Wire Line
-	5850 1450 6400 1450
-Text Label 5950 1450 0    50   Italic 0
+Text Label 5950 1000 0    50   Italic 0
 ROOMBA_TXD
-Wire Wire Line
-	5850 1850 6400 1850
-Text Label 5950 1850 0    50   Italic 0
+Text Label 5950 2400 0    50   Italic 0
 ROOMBA_BRC
-Wire Wire Line
-	4250 1650 5050 1650
-Text Label 4300 1650 0    50   ~ 0
+Text Label 4300 2200 0    50   ~ 0
 LOCAL_TXD
-Wire Wire Line
-	4250 1450 5050 1450
 Text Label 4300 1450 0    50   ~ 0
 LOCAL_RXD
-Wire Wire Line
-	4250 1850 5050 1850
-Text Label 4300 1850 0    50   ~ 0
+Text Label 4300 2400 0    50   ~ 0
 LOCAL_BRC
-$Comp
-L power:Earth #PWR014
-U 1 1 5BB8B769
-P 5450 2700
-F 0 "#PWR014" H 5450 2450 50  0001 C CNN
-F 1 "Earth" H 5450 2550 50  0001 C CNN
-F 2 "" H 5450 2700 50  0001 C CNN
-F 3 "~" H 5450 2700 50  0001 C CNN
-	1    5450 2700
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5450 2450 5450 2700
 $Comp
 L Connector:Conn_01x07_Male J1
 U 1 1 5BB8E599
@@ -517,4 +451,54 @@ Wire Wire Line
 Connection ~ 7300 3850
 Wire Wire Line
 	4300 3650 4950 3650
+Wire Wire Line
+	4250 2200 6400 2200
+Wire Wire Line
+	4250 2400 6400 2400
+$Comp
+L Device:R_US R7
+U 1 1 5BCD7E32
+P 5450 1650
+F 0 "R7" H 5550 1550 50  0000 C CNN
+F 1 "12K" H 5550 1800 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 5490 1640 50  0001 C CNN
+F 3 "~" H 5450 1650 50  0001 C CNN
+	1    5450 1650
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:Earth #PWR0101
+U 1 1 5BCDCD68
+P 5450 1900
+F 0 "#PWR0101" H 5450 1650 50  0001 C CNN
+F 1 "Earth" H 5450 1750 50  0001 C CNN
+F 2 "" H 5450 1900 50  0001 C CNN
+F 3 "~" H 5450 1900 50  0001 C CNN
+	1    5450 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5450 1800 5450 1900
+$Comp
+L Device:R_US R6
+U 1 1 5BCDDD61
+P 5450 1250
+F 0 "R6" H 5550 1150 50  0000 C CNN
+F 1 "6.04K" H 5550 1400 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 5490 1240 50  0001 C CNN
+F 3 "~" H 5450 1250 50  0001 C CNN
+	1    5450 1250
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5450 1400 5450 1450
+Wire Wire Line
+	5450 1000 5450 1100
+Wire Wire Line
+	5450 1000 6400 1000
+Wire Wire Line
+	4250 1450 5450 1450
+Connection ~ 5450 1450
+Wire Wire Line
+	5450 1450 5450 1500
 $EndSCHEMATC
