@@ -1,7 +1,8 @@
 License for roomba_esp_wifi by Matthew A. Sparks
+
 MIT License
 
-Copyright (c) 2018 Matthew A. SParks
+Copyright (c) 2018 Matthew A. Sparks
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this hardware, software, and associated documentation files (the "Product"), to deal in the Product without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Product, and to permit persons to whom the Product is furnished to do so, subject to the following conditions:
 
@@ -28,7 +29,7 @@ Under the following terms:
 
     ShareAlike - If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.
 
-No additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.
+No additional restrictions â€” You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.
 Notices:
 
 You do not have to comply with the license for elements of the material in the public domain or where your use is permitted by an applicable exception or limitation.
